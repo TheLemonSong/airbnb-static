@@ -24,10 +24,15 @@
     <![endif]-->
   </head>
 
+
+
   <body class="<%= page_classes %>">
 
-    <%= partial "navbar" %>
-    <%= yield %>
+    <!-- layouts/layout.erb -->
+    <%= partial "shared/navbar" %>   <!-- call _navbar.html.erb partial -->
+    <%= yield %>              <!-- Page content is injected here -->
+    <%= partial "shared/footer" %>   <!-- call _footer.html.erb partial -->
+
 
   </body>
 </html>
